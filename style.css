@@ -1,0 +1,108 @@
+html{
+    font-size: 16px;
+}
+body{
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Verdana";
+    src: url("fonts/verdana-font-family/verdana.ttf") format('truetype');
+}
+.container{
+    margin: 0 auto;
+    width: 90%;
+}
+.navbar{
+    background-color: #f76c6c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    color: #fff;
+
+}
+.logo{
+    font-size: 2rem;
+}
+ul{
+    list-style: none;
+}
+.nav-link{
+    color: #fff;
+    text-decoration: white;
+}
+.nav-link:hover{
+    color: cadetblue;
+}
+#home{
+    margin: 0;
+    background-image: url("https://picsum.photos/id/0/1200/300");
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+h1{
+    color: #ffffff;
+    font-size: 3.5rem;
+    text-align: center;
+    font-size: clamp(2rem, 10vw, 6rem);
+}
+#about{
+    font-size: 20px;
+    line-height: 150%;
+    font-family: 'Verdana';
+}
+h2{
+    font-size: 2rem;
+}
+
+#products{
+    background-color: #f76c6c;
+    color: #ffffff;
+
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+}
+.item{
+    border: 1px solid #ffffff;
+    margin: 5px;
+    border-radius: 3px;
+    font-family: Verdana;
+    font-size: 1.3rem;
+    padding: 20px;
+}
+.item1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+@media screen and (min-width: 500px){
+    .nav-item{
+        display: flex;
+        justify-content: space-between !important;
+        width: 250px;
+    }
+    .wrapper{
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 50% 50%;
+    }
+    .item1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .item{
+        font-size: clamp(0.8rem, 1vw, 4rem);
+    }
+
+}
